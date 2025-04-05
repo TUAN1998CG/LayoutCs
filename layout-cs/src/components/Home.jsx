@@ -1,23 +1,22 @@
 import {Button, Card, Container, Nav, Navbar, NavDropdown} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useNavigate} from "react-router-dom";
+import styles from '../css layout/Home.module.css'
+
+
 
 
 export default function Home(){
     const navigate = useNavigate();
-    const hanldleSingin = ()=>{
-        navigate("/singin");
-    }
     const handleLogin = () => {
         navigate('/login')
     }
     return (
-        <>
+        <div className={styles.homeLayout}>
             <div className='header'>
                 <div className='d-flex justify-content-evenly'>
                     <h2>Booking.com</h2>
                     <div>
-                        <button onClick={hanldleSingin}>Đăng ký</button>
                         <button onClick={handleLogin}>Đăng nhập</button>
                     </div>
                 </div>
@@ -56,7 +55,6 @@ export default function Home(){
                         <label htmlFor="room-type">Loại phòng:</label>
                         <select
                             id="room-type"
-
                             required
                         >
                             <option value="single">Phòng đơn</option>
@@ -116,6 +114,8 @@ export default function Home(){
                             <p><input type="checkbox" name="" id=""/>Dịch vụ</p>
                             <p><input type="checkbox" name="" id=""/>Dịch vụ</p>
                             <p><input type="checkbox" name="" id=""/>Dịch vụ</p>
+                        </div>
+                        <div className='check-box'>
                             <p><input type="checkbox" name="" id=""/>Dịch vụ</p>
                             <p><input type="checkbox" name="" id=""/>Dịch vụ</p>
                             <p><input type="checkbox" name="" id=""/>Dịch vụ</p>
@@ -258,7 +258,6 @@ export default function Home(){
                     </Card>
                 </div>
             </div>
-
-        </>
+        </div>
     )
 }

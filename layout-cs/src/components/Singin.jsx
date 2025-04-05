@@ -1,7 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'font-awesome/css/font-awesome.min.css'
+import styles from '../css layout/Singin.module.css'
+import {Link} from "react-router-dom";
 
 export default function Singin() {
     return (
+        <div className={styles.formLogin }  >
         <form>
             <div data-mdb-input-init className="form-outline mb-4">
                 <input type="email" id="form2Example1" className="form-control"/>
@@ -12,31 +16,31 @@ export default function Singin() {
                 <label className="form-label" htmlFor="form2Example2">Password</label>
             </div>
             <button type="button"
-                    className="btn btn-primary btn-block mb-4">Sign in
+                    className="btn btn-primary btn-block mb-4">Đăng ký
             </button>
-            <div className="text-center">
-                <p>Not a member? <a href="#!">Register</a></p>
-                <p>or sign up with:</p>
+            <div className="text-center d-flex justify-content-center">
                 <button type="button"
                         className="btn btn-link btn-floating mx-1">
-                    <i className="fab fa-facebook-f"></i>
+                    <i className="fa fa-facebook-f"></i>
                 </button>
 
                 <button type="button"
                         className="btn btn-link btn-floating mx-1">
-                    <i className="fab fa-google"></i>
+                    <i className="fa fa-google"></i>
                 </button>
 
                 <button type="button"
                         className="btn btn-link btn-floating mx-1">
-                    <i className="fab fa-twitter"></i>
+                    <i className="fa fa-twitter"></i>
                 </button>
 
                 <button type="button"
                         className="btn btn-link btn-floating mx-1">
-                    <i className="fab fa-github"></i>
+                    <i className="fa fa-github"></i>
                 </button>
             </div>
+            <Link to='/login'>Trở về</Link>
         </form>
+        </div>
     )
 }
